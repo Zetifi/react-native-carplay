@@ -164,6 +164,11 @@ class CarPlayModule internal constructor(private val reactContext: ReactApplicat
   }
 
   @ReactMethod
+  fun popToRootTemplate(animated: Boolean?) {
+    // avoid missing function
+  }
+
+  @ReactMethod
   fun popTemplate(animated: Boolean?) {
     handler.post {
       screenManager!!.pop()
